@@ -4,6 +4,10 @@
   min-height: 60em;
 }
 
+.main-header {
+  padding-top: 5em;
+}
+
 .App-logo-div {
   padding: 2.5em;
 }
@@ -12,6 +16,8 @@
   animation: App-logo-spin infinite 20s linear;
   pointer-events: none;
 }
+
+
 
 @keyframes App-logo-spin {
   from {

@@ -38,10 +38,21 @@ function mitchifyText(text) {
 function App() {
   return (
     <div className="App">
-      <Header as='h1' color='green' textAlign='center'>Mitchifier™</Header>
+      <Header as='h1' color='green' textAlign='center' className="main-header">Mitchifier™</Header>
       <div className="App-logo-div">
         <Image src={logo} className="App-logo" alt="logo" size='small' centered />
       </div>
+      <a
+        className="App-link"
+        href="https://twitter.com/Mitch_Kosowski"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        -@Mitch_Kosowski #GreatestTraderOfALLTIME
+        <span role="img" aria-label="Flexed Biceps"> 💪</span>
+        <span role="img" aria-label="Smiling Face With Sunglasses">😎</span>
+        <span role="img" aria-label="Thumbs Up">👍</span>
+      </a>
     </div>
   );
 }
