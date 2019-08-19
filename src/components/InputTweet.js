@@ -8,11 +8,11 @@ class InputTweet extends Component {
     }
 
     handleChange(e) {
-        this.props.onTemperatureChange(e.target.value);
+        this.props.onChange(e.target.value);
     }
 
     render() {
-        const temperature = this.props.temperature;
+        const originalTweet = this.props.originalTweet;
 
         return (
             <div>
@@ -20,7 +20,7 @@ class InputTweet extends Component {
                     <Grid.Row centered>
                         <Grid.Column width={8}>
                             <Form>
-                                <TextArea placeholder='Paste your dumb tweet here' value={temperature} onChange={this.handleChange} />
+                                <TextArea placeholder='Paste your dumb tweet here' value={originalTweet} onChange={this.handleChange} />
                             </Form>
                         </Grid.Column>
                     </Grid.Row>

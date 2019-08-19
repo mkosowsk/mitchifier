@@ -21,8 +21,8 @@ function mitchifyText(text) {
   const returnArray = [];
 
   for (let i = 0; i < textArray.length; i++) {
-
     const randomNumber = Math.random();
+
     if (randomNumber < 0.4) {
       returnArray.push(textArray[i].toUpperCase());
     } else if (randomNumber < 0.6) {
@@ -33,6 +33,7 @@ function mitchifyText(text) {
       returnArray.push(textArray[i]);
     }
   }
+  
   returnArray.push(getRandomEmoji());
   return returnArray.join(" ");
 }
@@ -41,7 +42,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.onClick = this.onClick.bind(this);
 
     this.state = {
@@ -50,14 +51,12 @@ class App extends Component {
     }
   }
 
-  handleCelsiusChange(originalTweet) {
+  handleChange(originalTweet) {
     this.setState({ originalTweet });
   }
 
   onClick() {
-    console.log(this);
     const mitchifiedTweet = mitchifyText(this.state.originalTweet);
-
     this.setState({ mitchifiedTweet });
   }
 
@@ -72,7 +71,7 @@ class App extends Component {
         </div>
         <InputTweet
           originalTweet={originalTweet}
-          onTemperatureChange={this.handleCelsiusChange}
+          onChange={this.handleChange}
         />
         <Button
           color='green'
