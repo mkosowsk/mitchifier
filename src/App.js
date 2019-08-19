@@ -33,8 +33,11 @@ function mitchifyText(text) {
       returnArray.push(textArray[i]);
     }
   }
-  
-  returnArray.push(getRandomEmoji());
+
+  // check if last character is an emoji and if not add an emoji
+  const lastCharacter = returnArray[returnArray.length - 1];
+  if (!emojis.includes(lastCharacter)) returnArray.push(getRandomEmoji());
+
   return returnArray.join(" ");
 }
 
