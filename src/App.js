@@ -23,11 +23,11 @@ function mitchifyText(text) {
   for (let i = 0; i < textArray.length; i++) {
 
     const randomNumber = Math.random();
-    if (randomNumber < 0.2) {
+    if (randomNumber < 0.4) {
       returnArray.push(textArray[i].toUpperCase());
-    } else if (randomNumber < 0.4) {
-      returnArray.push('#' + textArray[i]);
     } else if (randomNumber < 0.6) {
+      returnArray.push('#' + textArray[i]);
+    } else if (randomNumber < 0.8) {
       returnArray.push(textArray[i] + ' ' + getRandomEmoji() + '\n');
     } else {
       returnArray.push(textArray[i]);
