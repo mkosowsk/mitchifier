@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './mitch_kosowski.png';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -37,36 +37,39 @@ function mitchifyText(text) {
   return returnArray.join(" ");
 }
 
-function App() {
-  return (
-    <div className="App">
-      <div className="main-header-div">
-        <Header as='h1' color='green' textAlign='center'>Tweet Mitchifier™</Header>
-      </div>
-      <InputTweet />
-      <Button
-        color='green'
-        content='Mitchify™'
-        icon='heart'
+class App extends Component {
+  render() {
+
+    return (
+      <div className="App">
+        <div className="main-header-div">
+          <Header as='h1' color='green' textAlign='center'>Tweet Mitchifier™</Header>
+        </div>
+        <InputTweet />
+        <Button
+          color='green'
+          content='Mitchify™'
+          icon='heart'
         // onClick={mitchifyText()}
-      />
-      <OutputTweet />
-      <div className="App-logo-div">
-        <Image src={logo} className="App-logo" alt="logo" size='small' centered />
-      </div>
-      <a
-        className="App-link"
-        href="https://twitter.com/Mitch_Kosowski"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        -@Mitch_Kosowski #GreatestTraderOfALLTIME
+        />
+        <OutputTweet />
+        <div className="App-logo-div">
+          <Image src={logo} className="App-logo" alt="logo" size='small' centered />
+        </div>
+        <a
+          className="App-link"
+          href="https://twitter.com/Mitch_Kosowski"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          -@Mitch_Kosowski #GreatestTraderOfALLTIME
         <span role="img" aria-label="Flexed Biceps"> 💪</span>
-        <span role="img" aria-label="Smiling Face With Sunglasses">😎</span>
-        <span role="img" aria-label="Thumbs Up">👍</span>
-      </a>
-    </div>
-  );
+          <span role="img" aria-label="Smiling Face With Sunglasses">😎</span>
+          <span role="img" aria-label="Thumbs Up">👍</span>
+        </a>
+      </div>
+    );
+  }
 }
 
 export default App;
