@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, Grid, TextArea } from 'semantic-ui-react';
+import { Form, Grid, TextArea } from 'semantic-ui-react';
 
 class InputTweet extends Component {
     constructor(props) {
