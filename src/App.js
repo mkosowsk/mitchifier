@@ -38,7 +38,9 @@ function mitchifyText(text) {
 function App() {
   return (
     <div className="App">
-      <Header as='h1' color='green' textAlign='center' className="main-header">Mitchifier™</Header>
+      <div className="main-header-div">
+        <Header as='h1' color='green' textAlign='center'>Mitchifier™</Header>
+      </div>
       <div className="App-logo-div">
         <Image src={logo} className="App-logo" alt="logo" size='small' centered />
       </div>
