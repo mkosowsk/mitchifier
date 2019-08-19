@@ -52,7 +52,7 @@ class App extends Component {
           icon='heart'
         // onClick={mitchifyText()}
         />
-        <OutputTweet />
+        <OutputTweet mitchifiedTweet="sup"/>
         <div className="App-logo-div">
           <Image src={logo} className="App-logo" alt="logo" size='small' centered />
         </div>
