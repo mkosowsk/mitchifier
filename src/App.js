@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './mitch_kosowski.png';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Form, Grid, Header, Image, TextArea } from 'semantic-ui-react';
+import { Form, Grid, Header, Image, TextArea } from 'semantic-ui-react';
 import InputTweet from './components/InputTweet';
 import OutputTweet from './components/OutputTweet';
 
@@ -63,15 +63,8 @@ class App extends Component {
           temperature={temperature}
           onTemperatureChange={this.handleCelsiusChange}
         />
-        <Button
-          color='green'
-          content='Mitchify™'
-          icon='heart'
-        // onClick={mitchifyText()}
-        />
         <OutputTweet 
-          temperature={temperature}
-          onTemperatureChange={this.handleCelsiusChange}
+          temperature={mitchifyText(temperature)}
         />
         <div className="App-logo-div">
           <Image src={logo} className="App-logo" alt="logo" size='small' centered />

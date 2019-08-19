@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Grid, TextArea } from 'semantic-ui-react';
+import { Button, Form, Grid, TextArea } from 'semantic-ui-react';
 
 class InputTweet extends Component {
     constructor(props) {
@@ -15,15 +15,23 @@ class InputTweet extends Component {
         const temperature = this.props.temperature;
 
         return (
-            <Grid padded>
-                <Grid.Row centered>
-                    <Grid.Column width={8}>
-                        <Form>
-                            <TextArea placeholder='Paste your dumb tweet here' value={temperature} onChange={this.handleChange} />
-                        </Form>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+            <div>
+                <Grid padded>
+                    <Grid.Row centered>
+                        <Grid.Column width={8}>
+                            <Form>
+                                <TextArea placeholder='Paste your dumb tweet here' value={temperature} onChange={this.handleChange} />
+                            </Form>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+                <Button
+                    color='green'
+                    content='Mitchify™'
+                    icon='heart'
+                // onClick={mitchifyText()}
+                />
+            </div>
         )
     }
 }
