@@ -37,8 +37,8 @@ function mitchifyText(text) {
 
 function App() {
   return (
-    <div>
-      <Header as='h1' inverted color='red'>Mytchmatic™</Header>
+    <div className="App">
+      <Header as='h1' color='green' textAlign='center'>Mitchifier™</Header>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
