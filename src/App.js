@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './mitch_kosowski.png';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Form, Grid, Header, Image, TextArea } from 'semantic-ui-react';
+import { Button, Form, Grid, Header, Image, TextArea } from 'semantic-ui-react';
 import InputTweet from './components/InputTweet';
 import OutputTweet from './components/OutputTweet';
 
@@ -42,29 +42,45 @@ class App extends Component {
     super(props);
 
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.onClick = this.onClick.bind(this);
     this.state = {
-      temperature: ''
+      temperature: '',
+      mitchifiedTweet: ''
     }
   }
 
   handleCelsiusChange(temperature) {
-    this.setState({temperature});
+    this.setState({ temperature });
+  }
+
+  onClick() {
+    console.log(this);
+    const mitchifiedTweet = mitchifyText(this.state.temperature);
+
+    this.setState({ mitchifiedTweet });
   }
 
   render() {
     const temperature = this.state.temperature;
+    const mitchifiedTweet = this.state.mitchifiedTweet;
 
     return (
       <div className="App">
         <div className="main-header-div">
           <Header as='h1' color='green' textAlign='center'>Tweet Mitchifier™</Header>
         </div>
-        <InputTweet 
+        <InputTweet
           temperature={temperature}
           onTemperatureChange={this.handleCelsiusChange}
         />
-        <OutputTweet 
-          temperature={mitchifyText(temperature)}
+        <Button
+          color='green'
+          content='Mitchify™'
+          icon='heart'
+          onClick={this.onClick}
+        />
+        <OutputTweet
+          temperature={mitchifiedTweet}
         />
         <div className="App-logo-div">
           <Image src={logo} className="App-logo" alt="logo" size='small' centered />

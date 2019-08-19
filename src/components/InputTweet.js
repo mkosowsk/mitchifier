@@ -25,12 +25,6 @@ class InputTweet extends Component {
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
-                <Button
-                    color='green'
-                    content='Mitchify™'
-                    icon='heart'
-                // onClick={mitchifyText()}
-                />
             </div>
         )
     }
