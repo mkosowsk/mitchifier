@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, Grid, TextArea } from 'semantic-ui-react';
+import { Button, Form, Grid, Header, TextArea } from 'semantic-ui-react';
 import copy from 'copy-to-clipboard';
 
 class OutputTweet extends Component {
@@ -10,7 +10,6 @@ class OutputTweet extends Component {
     }
 
     copyToClipboard = (e) => {
-        console.log(this);
         copy(this.props.mitchifiedTweet)
         this.setState({ copySuccess: 'Copied!' });
     };
@@ -34,6 +33,7 @@ class OutputTweet extends Component {
                     content='Copy to Clipboard'
                     onClick={this.copyToClipboard}>
                 </Button>
+                <Header as='h3' color='green'>{this.state.copySuccess}</Header>
             </div>
         )
     }
