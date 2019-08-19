@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/mitchifier/static/css/main.646946dc.chunk.css",
+    "main.js": "/mitchifier/static/js/main.9688795f.chunk.js",
+    "main.js.map": "/mitchifier/static/js/main.9688795f.chunk.js.map",
+    "runtime~main.js": "/mitchifier/static/js/runtime~main.9c3bd1c6.js",
+    "runtime~main.js.map": "/mitchifier/static/js/runtime~main.9c3bd1c6.js.map",
+    "static/css/2.926275b0.chunk.css": "/mitchifier/static/css/2.926275b0.chunk.css",
+    "static/js/2.b1f2ea4d.chunk.js": "/mitchifier/static/js/2.b1f2ea4d.chunk.js",
+    "static/js/2.b1f2ea4d.chunk.js.map": "/mitchifier/static/js/2.b1f2ea4d.chunk.js.map",
+    "index.html": "/mitchifier/index.html",
+    "precache-manifest.d29f1b8b8d5b4e3a83f80a4819c7014b.js": "/mitchifier/precache-manifest.d29f1b8b8d5b4e3a83f80a4819c7014b.js",
+    "service-worker.js": "/mitchifier/service-worker.js",
+    "static/css/2.926275b0.chunk.css.map": "/mitchifier/static/css/2.926275b0.chunk.css.map",
+    "static/css/main.646946dc.chunk.css.map": "/mitchifier/static/css/main.646946dc.chunk.css.map",
+    "static/media/semantic.min.css": "/mitchifier/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/mitch_kosowski.png": "/mitchifier/static/media/mitch_kosowski.8ce9a7e6.png"
+  }
+}
