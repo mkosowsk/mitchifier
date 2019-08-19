@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, Grid, TextArea } from 'semantic-ui-react';
+import copy from 'copy-to-clipboard';
 
 class OutputTweet extends Component {
     constructor(props) {
@@ -10,8 +11,7 @@ class OutputTweet extends Component {
 
     copyToClipboard = (e) => {
         console.log(this);
-        this.textArea.select();
-        document.execCommand('copy');
+        copy(this.props.mitchifiedTweet)
         this.setState({ copySuccess: 'Copied!' });
     };
 
@@ -24,15 +24,15 @@ class OutputTweet extends Component {
                     <Grid.Row centered>
                         <Grid.Column width={8}>
                             <Form>
-                                <TextArea placeholder='Mitchified tweet will go here' value={mitchifiedTweet} ref={(textarea) => this.textArea = textarea} />
+                                <TextArea placeholder='Mitchified tweet will go here' value={mitchifiedTweet} />
                             </Form>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
                 <Button
                     color='green'
-                    content='Mitchify™'
-                    onClick={this.copyToClipboard}>Copy
+                    content='Copy to Clipboard'
+                    onClick={this.copyToClipboard}>
                 </Button>
             </div>
         )
