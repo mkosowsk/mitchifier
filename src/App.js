@@ -38,21 +38,41 @@ function mitchifyText(text) {
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.state = {
+      temperature: ''
+    }
+  }
+
+  handleCelsiusChange(temperature) {
+    this.setState({temperature});
+  }
+
   render() {
+    const temperature = this.state.temperature;
 
     return (
       <div className="App">
         <div className="main-header-div">
           <Header as='h1' color='green' textAlign='center'>Tweet Mitchifier™</Header>
         </div>
-        <InputTweet />
+        <InputTweet 
+          temperature={temperature}
+          onTemperatureChange={this.handleCelsiusChange}
+        />
         <Button
           color='green'
           content='Mitchify™'
           icon='heart'
         // onClick={mitchifyText()}
         />
-        <OutputTweet mitchifiedTweet="sup"/>
+        <OutputTweet 
+          temperature={temperature}
+          onTemperatureChange={this.handleCelsiusChange}
+        />
         <div className="App-logo-div">
           <Image src={logo} className="App-logo" alt="logo" size='small' centered />
         </div>
